@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 6</h1>
+    <h2>DOM Dasar (Document Object Model)</h2>
+
+    <h3>1. Apa itu DOM?</h3>
+    <p>DOM (Document Object Model) adalah representasi dari struktur halaman web yang memungkinkan JavaScript untuk mengakses dan memanipulasi elemen-elemen HTML.</p>
+
+    <h3>2. Mengakses Elemen HTML</h3>
+    <ul>
+        <li><code>document.getElementById('id')</code></li>
+        <li><code>document.querySelector('selector')</code></li>
+    </ul>
+
+    <pre>
+let judul = document.getElementById('judul');
+judul.style.color = 'blue';
+
+let paragraf = document.querySelector('p');
+paragraf.innerText = 'Teks ini telah diubah';
+    </pre>
+
+    <h3>3. Mengubah Teks dan Style</h3>
+    <pre>
+let elemen = document.getElementById('contoh');
+elemen.innerText = 'Ini adalah teks baru';
+elemen.style.backgroundColor = 'yellow';
+    </pre>
+
+    <h3>4. Event Listener Dasar</h3>
+    <pre>
+let tombol = document.getElementById('tombol');
+tombol.addEventListener('click', function() {
+    alert('Tombol diklik!');
+});
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat tombol yang ketika diklik, mengubah warna background halaman.</li>
+            <li>Buat paragraf yang teksnya berubah ketika diklik.</li>
+            <li>Buat input teks yang menampilkan hasilnya secara realtime di elemen lain (misalnya di heading).</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

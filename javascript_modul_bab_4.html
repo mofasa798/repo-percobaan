@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 4</h1>
+    <h2>Fungsi</h2>
+
+    <h3>1. Apa itu Fungsi?</h3>
+    <p>Fungsi adalah blok kode yang dapat digunakan berulang-ulang untuk menjalankan sebuah tugas tertentu.</p>
+
+    <h3>2. Function Declaration</h3>
+    <pre>
+function sapa() {
+    console.log('Halo, selamat datang!');
+}
+
+sapa(); // Memanggil fungsi
+    </pre>
+
+    <h3>3. Function Expression</h3>
+    <pre>
+const sapa = function() {
+    console.log('Halo, ini function expression!');
+}
+
+sapa();
+    </pre>
+
+    <h3>4. Fungsi dengan Parameter dan Return</h3>
+    <pre>
+function luasPersegiPanjang(panjang, lebar) {
+    return panjang * lebar;
+}
+
+let hasil = luasPersegiPanjang(5, 3);
+console.log('Luas: ' + hasil);
+    </pre>
+
+    <h3>5. Arrow Function</h3>
+    <pre>
+const luasSegitiga = (alas, tinggi) => {
+    return (alas * tinggi) / 2;
+};
+
+console.log(luasSegitiga(4, 6));
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat fungsi untuk menghitung keliling persegi panjang.</li>
+            <li>Buat fungsi untuk memeriksa apakah sebuah bilangan adalah bilangan prima.</li>
+            <li>Buat fungsi menggunakan arrow function untuk menghitung volume kubus.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

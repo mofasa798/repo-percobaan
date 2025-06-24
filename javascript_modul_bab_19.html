@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 19</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 19</h1>
+    <h2>Pengenalan Testing pada JavaScript</h2>
+
+    <h3>1. Apa itu Testing?</h3>
+    <p>Testing adalah proses untuk memastikan bahwa kode program berjalan sesuai dengan yang diharapkan dan bebas dari bug.</p>
+
+    <h3>2. Jenis Testing</h3>
+    <ul>
+        <li><strong>Unit Testing</strong>: Menguji fungsi atau komponen terkecil dari aplikasi secara terpisah.</li>
+        <li><strong>Integration Testing</strong>: Menguji bagaimana beberapa bagian aplikasi bekerja bersama.</li>
+        <li><strong>End-to-End (E2E) Testing</strong>: Menguji keseluruhan alur aplikasi seperti yang dilakukan oleh pengguna.</li>
+    </ul>
+
+    <h3>3. Contoh Unit Test dengan Jest</h3>
+    <pre>
+// sum.js
+function sum(a, b) {
+    return a + b;
+}
+
+module.exports = sum;
+    </pre>
+
+    <pre>
+// sum.test.js
+const sum = require('./sum');
+
+test('menambahkan 1 + 2 sama dengan 3', () => {
+    expect(sum(1, 2)).toBe(3);
+});
+    </pre>
+
+    <h3>4. Menjalankan Test dengan npm</h3>
+    <pre>
+// Tambahkan di package.json
+"scripts": {
+    "test": "jest"
+}
+
+// Jalankan perintah
+npm test
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat fungsi sederhana seperti penjumlahan atau pengurangan.</li>
+            <li>Buat file test untuk menguji fungsi tersebut menggunakan Jest.</li>
+            <li>Jalankan perintah <code>npm test</code> untuk melihat hasilnya.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

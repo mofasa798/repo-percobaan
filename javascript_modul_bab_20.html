@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 20</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 20</h1>
+    <h2>Build Project JavaScript: Aplikasi To-Do List</h2>
+
+    <h3>1. Tujuan Project</h3>
+    <p>Melatih penggunaan JavaScript, DOM, localStorage, dan event handling dalam pembuatan aplikasi sederhana.</p>
+
+    <h3>2. Fitur Aplikasi</h3>
+    <ul>
+        <li>Menambah tugas baru.</li>
+        <li>Menandai tugas yang sudah selesai.</li>
+        <li>Menyimpan data ke localStorage agar tidak hilang saat reload.</li>
+        <li>Menghapus tugas dari daftar.</li>
+    </ul>
+
+    <h3>3. Contoh Struktur HTML</h3>
+    <pre>
+<div id="todo-app">
+    <input type="text" id="todo-input" placeholder="Tambahkan tugas">
+    <button id="add-button">Tambah</button>
+    <ul id="todo-list"></ul>
+</div>
+    </pre>
+
+    <h3>4. Contoh JavaScript To-Do List</h3>
+    <pre>
+let todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+function renderTodos() {
+    const list = document.getElementById('todo-list');
+    list.innerHTML = '';
+    todos.forEach((todo, index) => {
+        const li = document.createElement('li');
+        li.textContent = todo;
+        li.addEventListener('click', () => removeTodo(index));
+        list.appendChild(li);
+    });
+}
+
+function addTodo() {
+    const input = document.getElementById('todo-input');
+    if (input.value.trim() !== '') {
+        todos.push(input.value);
+        localStorage.setItem('todos', JSON.stringify(todos));
+        input.value = '';
+        renderTodos();
+    }
+}
+
+function removeTodo(index) {
+    todos.splice(index, 1);
+    localStorage.setItem('todos', JSON.stringify(todos));
+    renderTodos();
+}
+
+document.getElementById('add-button').addEventListener('click', addTodo);
+renderTodos();
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Tambahkan fitur checkbox untuk menandai tugas yang sudah selesai.</li>
+            <li>Tambahkan tombol untuk menghapus semua tugas yang sudah selesai.</li>
+            <li>Gunakan styling CSS agar aplikasi terlihat lebih menarik.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Selesai</a>
+    </div>
+
+</body>
+
+</html>

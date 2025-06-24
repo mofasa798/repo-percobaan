@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 13</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 13</h1>
+    <h2>Local Storage dan Session Storage</h2>
+
+    <h3>1. Pengertian Local Storage dan Session Storage</h3>
+    <ul>
+        <li><strong>Local Storage</strong>: Menyimpan data di browser tanpa batas waktu.</li>
+        <li><strong>Session Storage</strong>: Menyimpan data selama sesi browser aktif.</li>
+    </ul>
+
+    <h3>2. Local Storage</h3>
+    <pre>
+// Menyimpan data
+localStorage.setItem('nama', 'Fikri');
+
+// Mengambil data
+let nama = localStorage.getItem('nama');
+console.log(nama);
+
+// Menghapus data
+localStorage.removeItem('nama');
+
+// Menghapus semua data
+localStorage.clear();
+    </pre>
+
+    <h3>3. Session Storage</h3>
+    <pre>
+// Menyimpan data
+sessionStorage.setItem('status', 'Login');
+
+// Mengambil data
+let status = sessionStorage.getItem('status');
+console.log(status);
+
+// Menghapus data
+sessionStorage.removeItem('status');
+
+// Menghapus semua data
+sessionStorage.clear();
+    </pre>
+
+    <h3>4. Menyimpan dan Mengambil Data Objek</h3>
+    <pre>
+let user = { nama: 'Fikri', umur: 25 };
+
+// Menyimpan object dalam local storage
+localStorage.setItem('user', JSON.stringify(user));
+
+// Mengambil object dari local storage
+let userData = JSON.parse(localStorage.getItem('user'));
+console.log(userData);
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat form input nama dan tombol "Simpan" yang menyimpan data ke local storage.</li>
+            <li>Tampilkan data yang disimpan setiap kali halaman dimuat.</li>
+            <li>Tambahkan tombol "Hapus Data" untuk menghapus data dari local storage.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

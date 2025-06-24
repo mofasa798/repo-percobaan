@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 12</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 12</h1>
+    <h2>JavaScript Object-Oriented Programming (OOP)</h2>
+
+    <h3>1. Konsep OOP pada JavaScript</h3>
+    <ul>
+        <li><strong>Class</strong>: Blueprint untuk membuat object.</li>
+        <li><strong>Object</strong>: Instance dari class.</li>
+        <li><strong>Constructor</strong>: Fungsi khusus untuk inisialisasi object.</li>
+        <li><strong>Method</strong>: Fungsi yang dimiliki oleh object.</li>
+    </ul>
+
+    <h3>2. Membuat Class dan Object</h3>
+    <pre>
+class Mobil {
+    constructor(merk, warna) {
+        this.merk = merk;
+        this.warna = warna;
+    }
+
+    info() {
+        return `Mobil ${this.merk} berwarna ${this.warna}`;
+    }
+}
+
+let mobil1 = new Mobil('Toyota', 'Merah');
+console.log(mobil1.info());
+    </pre>
+
+    <h3>3. Inheritance (Pewarisan)</h3>
+    <pre>
+class Kendaraan {
+    constructor(nama) {
+        this.nama = nama;
+    }
+
+    jalan() {
+        return `${this.nama} sedang berjalan.`;
+    }
+}
+
+class Motor extends Kendaraan {
+    constructor(nama, tipe) {
+        super(nama);
+        this.tipe = tipe;
+    }
+
+    detail() {
+        return `${this.nama} adalah motor tipe ${this.tipe}`;
+    }
+}
+
+let motor1 = new Motor('Honda', 'Sport');
+console.log(motor1.detail());
+console.log(motor1.jalan());
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat class <code>Hewan</code> dengan properti nama dan suara, serta method untuk menampilkan suara.</li>
+            <li>Buat class <code>Kucing</code> yang mewarisi class Hewan dan menambahkan properti warna.</li>
+            <li>Buat beberapa object dari class Kucing dan tampilkan datanya di console.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

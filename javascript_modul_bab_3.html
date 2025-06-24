@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 3</h1>
+    <h2>Percabangan dan Perulangan</h2>
+
+    <h3>1. Percabangan (Conditional)</h3>
+    <p>Percabangan digunakan untuk membuat keputusan berdasarkan kondisi tertentu.</p>
+
+    <h4>If - Else</h4>
+    <pre>
+let nilai = 80;
+
+if (nilai >= 75) {
+    console.log('Lulus');
+} else {
+    console.log('Tidak Lulus');
+}
+    </pre>
+
+    <h4>Switch Case</h4>
+    <pre>
+let hari = 'Senin';
+
+switch (hari) {
+    case 'Senin':
+        console.log('Hari kerja');
+        break;
+    case 'Sabtu':
+    case 'Minggu':
+        console.log('Hari libur');
+        break;
+    default:
+        console.log('Hari tidak diketahui');
+}
+    </pre>
+
+    <h3>2. Perulangan (Looping)</h3>
+
+    <h4>For Loop</h4>
+    <pre>
+for (let i = 1; i <= 5; i++) {
+    console.log('Angka ' + i);
+}
+    </pre>
+
+    <h4>While Loop</h4>
+    <pre>
+let i = 1;
+while (i <= 5) {
+    console.log('Angka ' + i);
+    i++;
+}
+    </pre>
+
+    <h4>Do-While Loop</h4>
+    <pre>
+let i = 1;
+do {
+    console.log('Angka ' + i);
+    i++;
+} while (i <= 5);
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat program untuk menentukan apakah sebuah angka ganjil atau genap.</li>
+            <li>Buat program untuk mencetak bilangan ganjil dari 1 sampai 100.</li>
+            <li>Buat program untuk menghitung grade siswa berdasarkan nilai:</li>
+            <ul>
+                <li>90-100: A</li>
+                <li>80-89: B</li>
+                <li>70-79: C</li>
+                <li>&lt;70: D</li>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

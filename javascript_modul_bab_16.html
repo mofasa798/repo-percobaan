@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 16</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 16</h1>
+    <h2>Pengenalan Framework JavaScript: Vue.js</h2>
+
+    <h3>1. Apa itu Vue.js?</h3>
+    <p>Vue.js adalah framework JavaScript progresif yang digunakan untuk membangun antarmuka pengguna yang dinamis dan reaktif dengan konsep component-based.</p>
+
+    <h3>2. Konsep Dasar Vue.js</h3>
+    <ul>
+        <li><strong>Data Binding</strong>: Menghubungkan data dan tampilan secara otomatis.</li>
+        <li><strong>Directives</strong>: Perintah khusus dalam HTML seperti <code>v-model</code> dan <code>v-if</code>.</li>
+        <li><strong>Components</strong>: Bagian-bagian kecil UI yang dapat digunakan ulang.</li>
+    </ul>
+
+    <h3>3. Contoh Vue.js Dasar</h3>
+    <pre>
+<div id="app">
+    <p>{{ message }}</p>
+    <button @click="ubahPesan">Ubah Pesan</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Halo Vue.js!'
+        },
+        methods: {
+            ubahPesan() {
+                this.message = 'Pesan telah diubah!';
+            }
+        }
+    });
+</script>
+    </pre>
+
+    <h3>4. Menggunakan Component Vue</h3>
+    <pre>
+Vue.component('hello-component', {
+    template: '<h2>Halo dari Komponen Vue!</h2>'
+});
+
+new Vue({ el: '#app' });
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat aplikasi Vue sederhana yang menampilkan input dan menampilkan hasilnya secara real-time.</li>
+            <li>Buat tombol untuk mengubah data yang ditampilkan.</li>
+            <li>Coba membuat komponen terpisah dan gunakan dalam halaman.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

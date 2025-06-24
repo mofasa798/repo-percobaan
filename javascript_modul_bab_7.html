@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 7</h1>
+    <h2>DOM Manipulation Lanjutan</h2>
+
+    <h3>1. Menambahkan Elemen Baru</h3>
+    <pre>
+let list = document.getElementById('daftar');
+let itemBaru = document.createElement('li');
+itemBaru.innerText = 'Item Baru';
+list.appendChild(itemBaru);
+    </pre>
+
+    <h3>2. Menghapus Elemen</h3>
+    <pre>
+let item = document.getElementById('hapus');
+item.remove();
+    </pre>
+
+    <h3>3. Traversing DOM</h3>
+    <ul>
+        <li><code>parentElement</code> - Mengakses elemen induk</li>
+        <li><code>children</code> - Mengakses semua anak elemen</li>
+        <li><code>nextElementSibling</code> - Mengakses elemen setelahnya</li>
+        <li><code>previousElementSibling</code> - Mengakses elemen sebelumnya</li>
+    </ul>
+
+    <pre>
+let item = document.getElementById('item1');
+console.log(item.parentElement);
+console.log(item.nextElementSibling);
+    </pre>
+
+    <h3>4. Manipulasi Class</h3>
+    <pre>
+let kotak = document.getElementById('kotak');
+kotak.classList.add('merah'); // Menambah class
+kotak.classList.remove('biru'); // Menghapus class
+kotak.classList.toggle('hijau'); // Menambah/menghapus class
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat tombol "Tambah Item" yang akan menambahkan elemen <code>&lt;li&gt;</code> baru ke dalam daftar.</li>
+            <li>Buat tombol "Hapus Item" yang akan menghapus item terakhir dari daftar.</li>
+            <li>Buat tombol "Toggle Warna" yang akan menambahkan atau menghapus class warna pada sebuah div.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

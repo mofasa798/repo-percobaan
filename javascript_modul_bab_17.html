@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 17</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 17</h1>
+    <h2>Pengenalan Framework JavaScript: Node.js</h2>
+
+    <h3>1. Apa itu Node.js?</h3>
+    <p>Node.js adalah runtime environment JavaScript yang memungkinkan menjalankan JavaScript di luar browser, umumnya digunakan untuk membuat backend aplikasi web.</p>
+
+    <h3>2. Fitur Utama Node.js</h3>
+    <ul>
+        <li>Berbasis event-driven dan non-blocking I/O.</li>
+        <li>Cocok untuk aplikasi yang membutuhkan koneksi real-time.</li>
+        <li>Memiliki npm (Node Package Manager) untuk mengelola package.</li>
+    </ul>
+
+    <h3>3. Contoh Program Sederhana Node.js</h3>
+    <pre>
+// File: app.js
+console.log('Halo dari Node.js!');
+
+// Jalankan di terminal dengan perintah:
+// node app.js
+    </pre>
+
+    <h3>4. Membuat Server Sederhana dengan Node.js</h3>
+    <pre>
+// File: server.js
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Halo, ini server Node.js!');
+});
+
+server.listen(3000, () => {
+    console.log('Server berjalan di http://localhost:3000');
+});
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Instal Node.js dan buat file JavaScript sederhana yang menampilkan pesan di terminal.</li>
+            <li>Buat server Node.js yang menampilkan pesan "Selamat Datang di Server Saya".</li>
+            <li>Uji server di browser menggunakan <code>localhost:3000</code>.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 11</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 11</h1>
+    <h2>Asynchronous JavaScript (Async / Await)</h2>
+
+    <h3>1. Apa itu Asynchronous?</h3>
+    <p>Asynchronous adalah proses menjalankan perintah yang tidak perlu menunggu perintah sebelumnya selesai, sehingga aplikasi tetap responsif.</p>
+
+    <h3>2. Penulisan Async / Await</h3>
+    <pre>
+async function getData() {
+    try {
+        let response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Terjadi kesalahan:', error);
+    }
+}
+
+getData();
+    </pre>
+
+    <h3>3. Kelebihan Async / Await</h3>
+    <ul>
+        <li>Kode lebih mudah dibaca dan ditulis.</li>
+        <li>Mengurangi penggunaan callback yang terlalu dalam (callback hell).</li>
+        <li>Mudah dalam penanganan error dengan try...catch.</li>
+    </ul>
+
+    <h3>4. Contoh Menggunakan Async / Await</h3>
+    <pre>
+document.getElementById('tombol').addEventListener('click', async function() {
+    let response = await fetch('https://jsonplaceholder.typicode.com/users');
+    let users = await response.json();
+    console.log(users);
+});
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat tombol untuk mengambil data dari API menggunakan async/await dan tampilkan di halaman.</li>
+            <li>Tambahkan penanganan error menggunakan try...catch.</li>
+            <li>Tambahkan loader "Memuat data..." saat proses fetch berlangsung.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

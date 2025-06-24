@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 15</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 15</h1>
+    <h2>Pengenalan Framework JavaScript: React JS</h2>
+
+    <h3>1. Apa itu React JS?</h3>
+    <p>React adalah library JavaScript yang digunakan untuk membangun antarmuka pengguna (UI) yang interaktif dan dinamis dengan konsep komponen.</p>
+
+    <h3>2. Konsep Dasar React</h3>
+    <ul>
+        <li><strong>Component</strong>: Bagian UI yang dapat digunakan ulang.</li>
+        <li><strong>JSX</strong>: Sintaks seperti HTML yang digunakan dalam React.</li>
+        <li><strong>State</strong>: Data lokal pada component yang dapat berubah.</li>
+        <li><strong>Props</strong>: Data yang dikirim ke component dari component lain.</li>
+    </ul>
+
+    <h3>3. Contoh Component React</h3>
+    <pre>
+function Hello(props) {
+    return <h1>Halo, {props.nama}!</h1>;
+}
+
+ReactDOM.render(
+    <Hello nama="Fikri" />, 
+    document.getElementById('root')
+);
+    </pre>
+
+    <h3>4. Menggunakan State</h3>
+    <pre>
+function Counter() {
+    const [count, setCount] = React.useState(0);
+
+    return {
+        <div>
+            <p>Anda menekan {count} kali</p>
+            <button onClick={() => setCount(count + 1)}>Tambah</button>
+        </div>
+    );
+}
+ReactDOM.render(<Counter />, document.getElementById('root'));
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat komponen React sederhana yang menampilkan nama Anda.</li>
+            <li>Buat komponen counter dengan tombol tambah dan kurang.</li>
+            <li>Gunakan props untuk mengirimkan data antar komponen.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

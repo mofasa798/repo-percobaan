@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 18</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 18</h1>
+    <h2>Pengenalan JavaScript Package Manager: npm</h2>
+
+    <h3>1. Apa itu npm?</h3>
+    <p>npm (Node Package Manager) adalah manajer paket untuk JavaScript yang digunakan untuk mengelola library, tools, dan framework yang dibutuhkan dalam project.</p>
+
+    <h3>2. Perintah Dasar npm</h3>
+    <ul>
+        <li><code>npm init</code>: Membuat file <code>package.json</code> untuk mengelola project.</li>
+        <li><code>npm install &lt;package&gt;</code>: Menginstal package.</li>
+        <li><code>npm uninstall &lt;package&gt;</code>: Menghapus package.</li>
+        <li><code>npm install -g &lt;package&gt;</code>: Menginstal package secara global.</li>
+    </ul>
+
+    <h3>3. Contoh Penggunaan npm</h3>
+    <pre>
+// Inisialisasi project npm
+npm init -y
+
+// Instalasi express
+npm install express
+
+// Menjalankan project
+node app.js
+    </pre>
+
+    <h3>4. Menjalankan Script dari package.json</h3>
+    <pre>
+// package.json
+"scripts": {
+    "start": "node app.js"
+}
+
+// Jalankan di terminal
+npm start
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Inisialisasi project menggunakan <code>npm init</code>.</li>
+            <li>Instal package express dan buat server sederhana.</li>
+            <li>Tambahkan script "start" di package.json untuk menjalankan server dengan perintah <code>npm start</code>.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

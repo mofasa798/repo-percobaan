@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 5</h1>
+    <h2>Array dan Object</h2>
+
+    <h3>1. Array</h3>
+    <p>Array adalah kumpulan data yang disimpan dalam satu variabel.</p>
+
+    <pre>
+let buah = ['Apel', 'Mangga', 'Pisang'];
+console.log(buah[0]); // Apel
+    </pre>
+
+    <h4>Metode Array</h4>
+    <ul>
+        <li><code>push()</code> - Menambahkan data di akhir array</li>
+        <li><code>pop()</code> - Menghapus data terakhir</li>
+        <li><code>shift()</code> - Menghapus data pertama</li>
+        <li><code>unshift()</code> - Menambahkan data di awal array</li>
+        <li><code>for loop</code> - Menelusuri isi array</li>
+    </ul>
+
+    <pre>
+buah.push('Jeruk');
+console.log(buah);
+
+buah.pop();
+console.log(buah);
+    </pre>
+
+    <h3>2. Object</h3>
+    <p>Object adalah struktur data yang berisi pasangan key dan value.</p>
+
+    <pre>
+let siswa = {
+    nama: 'Budi',
+    umur: 17,
+    jurusan: 'IPA'
+};
+
+console.log(siswa.nama);
+    </pre>
+
+    <h4>Menambahkan dan Menghapus Properti</h4>
+    <pre>
+siswa.alamat = 'Bandung';
+delete siswa.umur;
+console.log(siswa);
+    </pre>
+
+    <h3>3. Array of Object</h3>
+    <pre>
+let daftarSiswa = [
+    { nama: 'Budi', umur: 17 },
+    { nama: 'Ani', umur: 16 },
+    { nama: 'Sari', umur: 18 }
+];
+
+console.log(daftarSiswa[1].nama); // Ani
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat array berisi 5 jenis buah, lalu tampilkan satu per satu menggunakan for loop.</li>
+            <li>Buat object berisi data diri kamu (nama, umur, pekerjaan) lalu tampilkan semua datanya.</li>
+            <li>Buat array of object berisi daftar 3 buku (judul dan penulis) lalu tampilkan semua data buku tersebut.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 9</h1>
+    <h2>Form Handling dan Validasi</h2>
+
+    <h3>1. Mengambil Nilai Input</h3>
+    <pre>
+let inputNama = document.getElementById('nama');
+document.getElementById('tombol').addEventListener('click', function() {
+    alert('Nama Anda: ' + inputNama.value);
+});
+    </pre>
+
+    <h3>2. Validasi Form Sederhana</h3>
+    <pre>
+let form = document.getElementById('form');
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let nama = document.getElementById('nama').value;
+
+    if (nama === '') {
+        alert('Nama tidak boleh kosong!');
+    } else {
+        alert('Form berhasil dikirim!');
+    }
+});
+    </pre>
+
+    <h3>3. Validasi Panjang Karakter</h3>
+    <pre>
+let password = document.getElementById('password').value;
+if (password.length < 6) {
+    alert('Password minimal 6 karakter!');
+}
+    </pre>
+
+    <h3>4. Menampilkan Pesan Error di Halaman</h3>
+    <pre>
+let error = document.getElementById('error');
+if (nama === '') {
+    error.innerText = 'Nama wajib diisi.';
+}
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat form pendaftaran dengan input nama, email, dan password.</li>
+            <li>Validasi semua input tidak boleh kosong.</li>
+            <li>Validasi password minimal 6 karakter.</li>
+            <li>Tampilkan pesan kesalahan di halaman, bukan dengan alert.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

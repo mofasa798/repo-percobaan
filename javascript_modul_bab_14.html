@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 14</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 14</h1>
+    <h2>Modular JavaScript (Menggunakan Module)</h2>
+
+    <h3>1. Pengertian Module</h3>
+    <p>Module memungkinkan kita untuk memecah kode JavaScript menjadi beberapa file yang lebih kecil agar lebih terstruktur dan mudah dikelola.</p>
+
+    <h3>2. Export dan Import</h3>
+    <p><strong>File: math.js</strong></p>
+    <pre>
+export function tambah(a, b) {
+    return a + b;
+}
+
+export function kurang(a, b) {
+    return a - b;
+}
+    </pre>
+
+    <p><strong>File: app.js</strong></p>
+    <pre>
+import { tambah, kurang } from './math.js';
+
+console.log(tambah(5, 3));
+console.log(kurang(5, 3));
+    </pre>
+
+    <h3>3. Export Default</h3>
+    <pre>
+// File: greet.js
+export default function() {
+    console.log('Halo!');
+}
+
+// File: app.js
+import greet from './greet.js';
+
+greet();
+    </pre>
+
+    <h3>4. Cara Menggunakan Module di Browser</h3>
+    <pre>
+<script type="module" src="app.js"></script>
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat file module yang berisi fungsi penjumlahan, pengurangan, perkalian, dan pembagian.</li>
+            <li>Import dan gunakan semua fungsi tersebut di file utama.</li>
+            <li>Gunakan <code>type="module"</code> pada tag script HTML.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

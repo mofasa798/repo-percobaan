@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 10</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 10</h1>
+    <h2>Introduction to Fetch API (Pengambilan Data dari Server)</h2>
+
+    <h3>1. Apa itu Fetch API?</h3>
+    <p>Fetch API adalah metode modern untuk mengambil data dari server secara asynchronous (tanpa me-refresh halaman).</p>
+
+    <h3>2. Fetch Data dari API</h3>
+    <pre>
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+    </pre>
+
+    <h3>3. Menampilkan Data ke Halaman</h3>
+    <pre>
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(users => {
+        let list = document.getElementById('userList');
+        users.forEach(user => {
+            let li = document.createElement('li');
+            li.innerText = user.name;
+            list.appendChild(li);
+        });
+    });
+    </pre>
+
+    <h3>4. Penanganan Error</h3>
+    <pre>
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Jaringan bermasalah');
+        }
+        return response.json();
+    })
+    .then(data => console.log(data))
+    .catch(error => console.error('Terjadi error:', error));
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Ambil data dari API <code>https://jsonplaceholder.typicode.com/todos</code> dan tampilkan di halaman.</li>
+            <li>Tambahkan penanganan error jika API gagal diakses.</li>
+            <li>Tambahkan loader (teks "Loading...") saat data sedang diambil.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

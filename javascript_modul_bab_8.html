@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 8</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 8</h1>
+    <h2>Event Handling</h2>
+
+    <h3>1. Apa itu Event Handling?</h3>
+    <p>Event handling adalah proses menangani interaksi pengguna dengan halaman web, seperti klik, input, hover, dll.</p>
+
+    <h3>2. Jenis-Jenis Event</h3>
+    <ul>
+        <li><code>click</code>: Saat elemen diklik</li>
+        <li><code>mouseover</code>: Saat mouse berada di atas elemen</li>
+        <li><code>keydown</code>: Saat tombol keyboard ditekan</li>
+        <li><code>submit</code>: Saat form dikirim</li>
+    </ul>
+
+    <h3>3. Menambahkan Event Listener</h3>
+    <pre>
+let tombol = document.getElementById('tombol');
+tombol.addEventListener('click', function() {
+    alert('Tombol diklik!');
+});
+    </pre>
+
+    <h3>4. Prevent Default</h3>
+    <p>Prevent default digunakan untuk mencegah perilaku bawaan elemen, seperti submit form yang me-refresh halaman.</p>
+
+    <pre>
+let form = document.getElementById('form');
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Form berhasil ditangani tanpa reload!');
+});
+    </pre>
+
+    <h3>5. Event Bubbling</h3>
+    <p>Event bubbling adalah proses dimana event naik dari elemen target ke elemen induknya.</p>
+
+    <pre>
+document.getElementById('kotak').addEventListener('click', function() {
+    alert('Kotak diklik!');
+});
+
+document.body.addEventListener('click', function() {
+    alert('Body diklik!');
+});
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat tombol yang mengubah warna latar belakang setiap kali diklik.</li>
+            <li>Buat form sederhana dengan input nama, dan ketika disubmit, tampilkan alert dengan nama tersebut tanpa reload halaman.</li>
+            <li>Buat contoh sederhana event bubbling dengan 2 elemen yang bersarang, lalu tangani kedua event-nya.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>

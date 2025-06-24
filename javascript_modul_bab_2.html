@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar JavaScript - Bab 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .exercise {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 4px solid #4285f4;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            background-color: #4285f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modul Belajar JavaScript - Bab 2</h1>
+    <h2>Variabel, Tipe Data, dan Operator</h2>
+
+    <h3>1. Variabel dalam JavaScript</h3>
+    <p>Variabel digunakan untuk menyimpan data. Ada tiga cara mendeklarasikan variabel:</p>
+    <ul>
+        <li><code>var</code>: Variabel lama, jarang digunakan pada modern JavaScript.</li>
+        <li><code>let</code>: Variabel yang dapat diubah.</li>
+        <li><code>const</code>: Variabel yang nilainya tetap (konstan).</li>
+    </ul>
+
+    <pre>
+let nama = 'Fikri';
+const umur = 25;
+var alamat = 'Bandung';
+    </pre>
+
+    <h3>2. Tipe Data</h3>
+    <ul>
+        <li><strong>String:</strong> "Teks"</li>
+        <li><strong>Number:</strong> 1, 2.5, 100</li>
+        <li><strong>Boolean:</strong> true, false</li>
+        <li><strong>Null:</strong> Kosong</li>
+        <li><strong>Undefined:</strong> Belum diberi nilai</li>
+    </ul>
+
+    <pre>
+let nama = "Fikri"; // String
+let umur = 25;      // Number
+let aktif = true;   // Boolean
+let kosong = null;  // Null
+let belum;          // Undefined
+    </pre>
+
+    <h3>3. Operator</h3>
+    <ul>
+        <li><strong>Aritmatika:</strong> +, -, *, /, %</li>
+        <li><strong>Perbandingan:</strong> ==, ===, !=, &lt;, &gt;, &lt;=, &gt;=</li>
+        <li><strong>Logika:</strong> &&, ||, !</li>
+    </ul>
+
+    <pre>
+let a = 10;
+let b = 5;
+console.log(a + b); // Penjumlahan
+console.log(a > b); // Perbandingan
+console.log(a > 0 && b > 0); // Logika
+    </pre>
+
+    <div class="exercise">
+        <h3>Latihan:</h3>
+        <ul>
+            <li>Buat variabel untuk menyimpan nama, umur, dan status pekerjaan kamu.</li>
+            <li>Buat operasi matematika sederhana: penjumlahan, pengurangan, perkalian, dan pembagian.</li>
+            <li>Gunakan operator perbandingan untuk membandingkan dua angka.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <a href="#">Bab Sebelumnya</a>
+        <a href="#">Bab Selanjutnya</a>
+    </div>
+
+</body>
+
+</html>
